@@ -12257,7 +12257,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -12287,14 +12287,14 @@ Testing set has 95 samples.
 <span class="c1"># train_predict(clf, X_train, y_train, X_test, y_test)</span>
 
 <span class="c1"># SVMs</span>
-<span class="c1">#train_predict(clf_A, X_train_100, y_train_100, X_test, y_test)</span>
-<span class="c1">#train_predict(clf_A, X_train_200, y_train_200, X_test, y_test)</span>
-<span class="c1">#train_predict(clf_A, X_train, y_train, X_test, y_test)</span>
+<span class="n">train_predict</span><span class="p">(</span><span class="n">clf_A</span><span class="p">,</span> <span class="n">X_train_100</span><span class="p">,</span> <span class="n">y_train_100</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">train_predict</span><span class="p">(</span><span class="n">clf_A</span><span class="p">,</span> <span class="n">X_train_200</span><span class="p">,</span> <span class="n">y_train_200</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">train_predict</span><span class="p">(</span><span class="n">clf_A</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 
 <span class="c1"># Logistic Regression</span>
-<span class="c1">#train_predict(clf_B, X_train_100, y_train_100, X_test, y_test)</span>
-<span class="c1">#train_predict(clf_B, X_train_200, y_train_200, X_test, y_test)</span>
-<span class="c1">#train_predict(clf_B, X_train, y_train, X_test, y_test)</span>
+<span class="n">train_predict</span><span class="p">(</span><span class="n">clf_B</span><span class="p">,</span> <span class="n">X_train_100</span><span class="p">,</span> <span class="n">y_train_100</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">train_predict</span><span class="p">(</span><span class="n">clf_B</span><span class="p">,</span> <span class="n">X_train_200</span><span class="p">,</span> <span class="n">y_train_200</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">train_predict</span><span class="p">(</span><span class="n">clf_B</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 
 <span class="c1"># Ensemble</span>
 <span class="n">train_predict</span><span class="p">(</span><span class="n">clf_C</span><span class="p">,</span> <span class="n">X_train_100</span><span class="p">,</span> <span class="n">y_train_100</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
@@ -12312,20 +12312,56 @@ Testing set has 95 samples.
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Training a RandomForestClassifier using a training set size of 100. . .
-Trained model in 0.0174 seconds
-Made predictions in 0.0011 seconds.
-F1 score for training set: 0.9934.
+<pre>Training a SVC using a training set size of 100. . .
+Trained model in 0.0045 seconds
+Made predictions in 0.0008 seconds.
+F1 score for training set: 0.8772.
+Made predictions in 0.0005 seconds.
+F1 score for test set: 0.7843.
+Training a SVC using a training set size of 200. . .
+Trained model in 0.0026 seconds
+Made predictions in 0.0018 seconds.
+F1 score for training set: 0.8190.
+Made predictions in 0.0009 seconds.
+F1 score for test set: 0.7742.
+Training a SVC using a training set size of 300. . .
+Trained model in 0.0052 seconds
+Made predictions in 0.0032 seconds.
+F1 score for training set: 0.8761.
+Made predictions in 0.0010 seconds.
+F1 score for test set: 0.7838.
+Training a LogisticRegression using a training set size of 100. . .
+Trained model in 0.0007 seconds
+Made predictions in 0.0001 seconds.
+F1 score for training set: 0.9200.
+Made predictions in 0.0001 seconds.
+F1 score for test set: 0.7194.
+Training a LogisticRegression using a training set size of 200. . .
+Trained model in 0.0012 seconds
+Made predictions in 0.0001 seconds.
+F1 score for training set: 0.8197.
+Made predictions in 0.0001 seconds.
+F1 score for test set: 0.6957.
+Training a LogisticRegression using a training set size of 300. . .
+Trained model in 0.0018 seconds
+Made predictions in 0.0001 seconds.
+F1 score for training set: 0.8468.
+Made predictions in 0.0001 seconds.
+F1 score for test set: 0.8060.
+Training a RandomForestClassifier using a training set size of 100. . .
+Trained model in 0.0114 seconds
 Made predictions in 0.0006 seconds.
+F1 score for training set: 0.9934.
+Made predictions in 0.0005 seconds.
 F1 score for test set: 0.7727.
 Training a RandomForestClassifier using a training set size of 200. . .
-Trained model in 0.0432 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0116 seconds
+Made predictions in 0.0006 seconds.
 F1 score for training set: 0.9928.
-Made predictions in 0.0008 seconds.
+Made predictions in 0.0006 seconds.
 F1 score for test set: 0.6508.
 Training a RandomForestClassifier using a training set size of 300. . .
-Trained model in 0.0139 seconds
+Trained model in 0.0136 seconds
 Made predictions in 0.0008 seconds.
 F1 score for training set: 0.9951.
 Made predictions in 0.0006 seconds.
@@ -12506,7 +12542,7 @@ F1 score for test set: 0.8092.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>For the final model, we are using something called a Logistic Regression model. Essentially what this allows us to do is approach problems where we have a binary decision, in this case: intervene or not intervene. This model looks at student data and whether or not they passed. Over enough samples, the model learns the patterns in the various factors and is able to determine which individual or group of factors is likely to cause a student to pass or not pass. Using knowledge of these trends, this model predicts whether or not a new student will not pass (thus requiring intervention) or pass (no intervention required) based on what data you have for their risk factors.</p>
+<p>For the final model, we are using something called a Logistic Regression model. Essentially what this allows us to do is approach problems where we have a binary decision, in this case: intervene or not intervene. In order to make this decision, this algorithm uses a large set of input variables known as "features" for things like sex, age, internet access, etc. We can "train" this algorithm by splitting the data we know about the students into a training set and test set which allows us to validate how well the algorithm can predict a student's need for intervention. The algorithm learns how to best predict a student's need for intervention by "learning" from the training set through calculating some probabilites of the input features and if they correlate to a student passing or not passing. Using a combination of these probabilities, it generates a decision based on whichever is the higher probability between the student passing or not passing.</p>
 
 </div>
 </div>
@@ -12537,7 +12573,7 @@ F1 score for test set: 0.8092.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -12622,6 +12658,19 @@ Tuned model has a testing F1 score of 0.7914.
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
